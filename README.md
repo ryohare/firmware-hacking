@@ -15,6 +15,8 @@ Included in the repository here.
 ### Hashcat
 ```bash
 # get hashes in hashcat format I COULD NOT GET THIS TO CRACK ON HASHCAT CORRECTLY
+# Did some googling and found a forum which says hashcat does not support pkzip
+# type cracking, and recommended using john. So that may be the issue. Didnt observe the date.
 zip2john router-firmware.zip | cut -d ':' -f 2 > zip_hashes.txt
 
 # spoke of using the correct mask to crack this
